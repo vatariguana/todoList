@@ -55,7 +55,11 @@ const TodosList = (props) => {
     setValueInput(e.target.value);
   };
   const onUpdateItem = (name) => {
-    dispatch(editItemTodoList(name, valueInput));
+    if (!valueInput) {
+      alert("ingrese valor a actualizar");
+    } else {
+      dispatch(editItemTodoList(name, valueInput));
+    }
   };
 
   const InputEdit = (props) => {

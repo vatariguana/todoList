@@ -21,8 +21,9 @@ const NewTodoItem = () => {
     const nameTodoList = todoList?.find((item) => {
       return item.name === value;
     });
-
-    if (nameTodoList) {
+    if (!value) {
+      alert("ingrese una tarea");
+    } else if (nameTodoList) {
       alert("Ya existe una tarea con el mismo nombre");
     } else {
       dispatch(

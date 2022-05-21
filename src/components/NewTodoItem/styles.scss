@@ -1,11 +1,12 @@
 @import "../../assets/scss/variables";
 
 .newTodoItem {
+  background-color: $darkGray;
   .inputNew {
-    height: 33px;
+    height: 34px;
     width: 300px;
     padding: 2px;
-    font-size: 20px;
+    font-size: $fontsize;
     background-color: $darkGray;
     color: $white;
     border: $darkGray;
@@ -14,9 +15,7 @@
     }
   }
   .buttonNew {
-    padding: 2px;
-    width: 130px;
-    height: 37px;
+    padding: 8px;
     border: none;
     font-size: $fontsize;
     font-family: Georgia, "Times New Roman", Times, serif;
