@@ -1,154 +1,146 @@
+@import "../../assets/scss/variables.scss";
 
-@media only screen and (max-width: 600px)  {
-    //mobile
-    .todoListContainer{
-            margin-top: 2%;
-            margin-left: 5px;
-            margin-right: 5px;
-            padding: 2px;
-        li{
-            list-style: none;
+.todoListContainer {
+  margin-top: 2%;
+  box-shadow: 0px 4px 17px 3px rgba(250, 248, 248, 0.43);
+  .itemList {
+    background-color: $darkGray;
+    border-bottom: 1px solid $white;
+    &.tachado {
+      text-decoration: line-through;
+      background-color: $darkGray;
+      border-bottom: 1px solid $white;
+      color: rgb(255, 51, 0);
+    }
+    .itemsContainer {
+      display: flex;
+      justify-items: center;
+      align-items: baseline;
+      .item {
+        display: flex;
+        align-items: stretch;
+        .nameItem {
+          width: 300px;
+          font-family: Georgia, "Times New Roman", Times, serif;
+          font-size: 18px;
+          color: white;
+          margin-left: 6px;
         }
-        .tachado {
-            text-decoration: line-through;
-            background-color: #353F3E ;
-            border-bottom: 1px solid white;
-            color: rgb(255, 51, 0);
+      }
+      .contenedorButton {
+        margin-bottom: 20px;
+        display: flex;
+        margin-left: 2px;
+
+        .buttonItem {
+          margin: 2px;
+          background-color: #353f3e;
+          width: 35px;
+          height: 35px;
+          border: none;
+          color: white;
+          &:hover {
+            cursor: pointer;
+          }
         }
-        .liname{
-            background-color: #353F3E;
-            border-bottom: 1px solid white;
+      }
+    }
+    .contenedorEdit {
+      background-color: $lightGray;
+      border: none;
+      .inputEdit {
+        height: 33px;
+        width: 300px;
+        padding: 2px;
+        font-family: $georgiaFont;
+        font-size: 20px;
+        background-color: $lightGray;
+        color: $white;
+        border: $darkGray;
+        margin-left: 3px;
+        &:focus {
+          outline-width: 0;
         }
-        .itemsContainer{
-            display: flex;
-            justify-items: center;
-            align-items: baseline;
+      }
+      .buttonEdit {
+        padding: 7px;
+        width: 131px;
+        border: none;
+        font-family: $georgiaFont;
+        font-size: 20px;
+        background-color: $lightGray;
+        color: $white;
+        &:hover {
+          cursor: pointer;
         }
-        .nameItem{
-            width: 300px;
-            font-family:Georgia, 'Times New Roman', Times, serif;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .todoListContainer {
+    margin-top: 4%;
+    .itemList {
+      background-color: $darkGray;
+      border-bottom: 1px solid $white;
+      &.tachado {
+        text-decoration: line-through;
+        background-color: $darkGray;
+        border-bottom: 1px solid $white;
+        color: rgb(255, 51, 0);
+      }
+      .itemsContainer {
+        .item {
+          display: contents;
+          .nameItem {
+            width: 210px;
             font-size: 18px;
             color: white;
             margin-left: 6px;
-    
+          }
         }
-        .inputEdit{
-            height: 33px;
-            width: 200px;
-            padding: 2px;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size: 20px;
-            background-color:#6a7776;
-            color: white;
-            border:#353F3E;
-            margin-left: 3px;
+        .contenedorButton {
+          margin-left: 2px;
+          .buttonItem {
+            background-color: $darkGray;
+            width: 36px;
+            height: 36px;
+            border: none;
+            color: $white;
+            &:hover {
+              cursor: pointer;
+            }
+          }
         }
-        .inputEdit:focus{
+      }
+      .contenedorEdit {
+        background-color: $lightGray;
+        border: none;
+        .inputEdit {
+          height: 34px;
+          width: 210px;
+          padding: 6px;
+          border: none;
+          font-size: $fontsize;
+          background-color: $lightGray;
+          color: $white;
+          &:focus {
             outline-width: 0;
+          }
         }
-        .buttonEdit{
-            padding: 7px;
-            width: 130px;
-            height: 37px;
-            border: none;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size: 20px;
-            background-color:#6a7776;
-            color: white;
+        .buttonEdit {
+          padding: 12px;
+          border: none;
+          font-family: Georgia, "Times New Roman", Times, serif;
+          font-size: $fontsize;
+          background-color: $lightGray;
+          color: $white;
+          &:hover {
+            cursor: pointer;
+          }
         }
-        .contenedorButton{
-            margin-bottom: 20px;
-            display: flex;
-            margin-left: 2px;
-        }
-        .item{
-            display: contents;
-        }
-        .buttonItem{    
-            border: 2px solid rgb(45, 160, 66);
-            margin: 2px;
-            background-color: #353F3E ;
-            width: 35px;
-            height: 35px;
-            border: none;
-            color: white;
-        }
-    }
-    
-  }
-
-    @media only screen and (min-width: 600px) {
-        //dest
-        .todoListContainer{
-            margin-top: 2%;
-            box-shadow: 0px 4px 17px 3px rgba(250, 248, 248, 0.43);
-            li{
-                list-style: none;
-            }
-            .tachado {
-                text-decoration: line-through;
-                background-color: #353F3E ;
-                border-bottom: 1px solid white;
-                color: rgb(255, 51, 0);
-        
-            }
-            .liname{
-                background-color: #353F3E;
-                border-bottom: 1px solid white;
-            }
-            .itemsContainer{
-                display: flex;
-                justify-items: center;
-                align-items: baseline;
-            }
-            .nameItem{
-                width: 300px;
-                font-family:Georgia, 'Times New Roman', Times, serif;
-                font-size: 18px;
-                color: white;
-                margin-left: 6px;
-        
-            }
-            .inputEdit{
-                height: 33px;
-                width: 300px;
-                padding: 2px;
-                font-family:Georgia, 'Times New Roman', Times, serif;
-                font-size: 20px;
-                background-color:#6a7776;
-                color: white;
-                border:#353F3E;
-                margin-left: 3px;
-            }
-            .inputEdit:focus{
-                outline-width: 0;
-            }
-            .buttonEdit{
-                padding: 7px;
-                width: 131px;
-                border: none;
-                font-family:Georgia, 'Times New Roman', Times, serif;
-                font-size: 20px;
-                background-color:#6a7776;
-                color: white;
-            }
-            .contenedorButton{
-                margin-bottom: 20px;
-                display: flex;
-                margin-left: 2px;
-            }
-            .item{
-                display: flex;
-                align-items: stretch;
-            }
-            .buttonItem{    
-                margin: 2px;
-                background-color: #353F3E ;
-                width: 35px;
-                height: 35px;
-                border: none;
-                color: white;
-            }
-        
       }
     }
+  }
+}

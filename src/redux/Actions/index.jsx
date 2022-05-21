@@ -97,14 +97,12 @@ export const editItemTodoList = (name, valueInput) => async (dispatch) => {
       type: "ERRORS",
       payload: {
         title: "ERROR",
-        message: "ALGO FALLO", // manejar errores dek backend
+        message: "ALGO FALLO",
       },
     });
   }
 };
 export const deleteItemTodoList = (arrayIndex) => async (dispatch) => {
-  console.log("DELETE");
-  console.log(arrayIndex);
   dispatch({
     type: "LOADING",
   });
@@ -122,7 +120,7 @@ export const deleteItemTodoList = (arrayIndex) => async (dispatch) => {
       type: "ERRORS",
       payload: {
         title: "ERROR",
-        message: "ALGO FALLO", // manejar errores dek backend
+        message: "ALGO FALLO",
       },
     });
   }

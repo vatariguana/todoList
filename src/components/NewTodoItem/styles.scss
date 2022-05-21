@@ -1,63 +1,59 @@
+@import "../../assets/scss/variables";
 
-@media only screen and (max-width: 600px) {
-    //mobile
-    .newTodoItem{
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color:#353F3E;
-        padding: 3px;
-        .inputNew{
-            height: 33px;
-            width: 200px;
-            padding: 2px;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size: 20px;
-            background-color:#353F3E;
-            color: white;
-            border:#353F3E;
-            margin-left: 3px;
-        }
-        .inputNew:focus{
-            outline-width: 0;
-        }
-        .buttonNew{
-            padding: 2px;
-            width: 130px;
-            height: 37px;
-            border: none;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size: 20px;
-            background-color: #353F3E;
-            color: white;
-        }
-    }
-   
-  }
-  @media only screen and (min-width: 600px) {
-      //des
-      .newTodoItem{
-        .inputNew{
-            height: 33px;
-            width: 300px;
-            padding: 2px;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size: 20px;
-            background-color:#353F3E;
-            color: white;
-            border:#353F3E;
-        }
-        .inputNew:focus{
-            outline-width: 0;
-        }
-        .buttonNew{
-            padding: 2px;
-            width: 130px;
-            height: 37px;
-            border: none;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size: 20px;
-            background-color: #353F3E;
-            color: white;
-        }
+.newTodoItem {
+  .inputNew {
+    height: 33px;
+    width: 300px;
+    padding: 2px;
+    font-size: 20px;
+    background-color: $darkGray;
+    color: $white;
+    border: $darkGray;
+    &:focus {
+      outline-width: 0;
     }
   }
+  .buttonNew {
+    padding: 2px;
+    width: 130px;
+    height: 37px;
+    border: none;
+    font-size: $fontsize;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: $darkGray;
+    color: $white;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 600px) {
+  //mobile
+  .newTodoItem {
+    background-color: $darkGray;
+    padding: 4px;
+    .inputNew {
+      height: 34px;
+      width: 200px;
+      padding: 2px;
+      font-size: $fontsize;
+      background-color: $darkGray;
+      color: $white;
+      border: $darkGray;
+      margin-left: 2px;
+      &:focus {
+        outline-width: 0;
+      }
+    }
+    .buttonNew {
+      padding: 12px;
+      border: none;
+      font-size: $fontsize;
+      background-color: $darkGray;
+      color: $white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

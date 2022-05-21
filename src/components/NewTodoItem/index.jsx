@@ -1,26 +1,41 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { create as addToTodoList } from "../../redux/Actions";
+import { getList } from "../../redux/Actions";
 import "./styles.scss";
 const NewTodoItem = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState();
+  const {
+    list: todoList,
+    successProcess,
+    errorProcess,
+  } = useSelector(({ todoListReducer }) => todoListReducer);
 
   const onInputChange = (e) => {
-    setValue(e.target.value);
-  };
-  const onHandleClick = () => {
-    console.log("value input", value);
-    dispatch(
-      addToTodoList({
-        name: value,
-        isDone: false,
-      })
-    );
+    const valueInput = e.target.value;
+    setValue(valueInput);
   };
 
+  const onHandleClick = () => {
+    const nameTodoList = todoList?.find((item) => {
+      return item.name === value;
+    });
+
+    if (nameTodoList) {
+      alert("Ya existe una tarea con el mismo nombre");
+    } else {
+      dispatch(
+        addToTodoList({
+          name: value,
+          isDone: false,
+        })
+      );
+      setValue("");
+    }
+  };
   return (
-    <div className="newTodoItem m-hide">
+    <div className="newTodoItem ">
       <input
         className="inputNew"
         type="text"

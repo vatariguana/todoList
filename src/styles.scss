@@ -1,17 +1,12 @@
-
-@media only screen and (max-width: 600px) {
-    //mobile
-    .contenedorApp{
-        width: auto;
-        
-    }
+.contenedorApp {
+  width: 100%;
+  display: inline-grid;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  //mobile
+  .contenedorApp {
+    width: auto;
+    display: grid;
   }
-  @media only screen and (min-width: 600px) {
-      //des
-    .contenedorApp{
-        width: 100%;
-        display: inline-grid;
-        justify-content: center;
-        
-    }
-  }
+}

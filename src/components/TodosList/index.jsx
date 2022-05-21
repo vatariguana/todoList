@@ -61,7 +61,7 @@ const TodosList = (props) => {
   const InputEdit = (props) => {
     const { item } = props;
     return (
-      <>
+      <div className="contenedorEdit">
         <input
           className="inputEdit"
           type="text"
@@ -72,13 +72,16 @@ const TodosList = (props) => {
         <button className="buttonEdit" onClick={() => onUpdateItem(item.name)}>
           Actualizar
         </button>
-      </>
+      </div>
     );
   };
   return (
     <div className="todoListContainer ">
       {todoList?.map((item, index) => (
-        <li key={item.name} className={item.isDone ? "tachado" : "liname"}>
+        <div
+          key={item.name}
+          className={`itemList ${item.isDone ? "tachado" : ""}`}
+        >
           {isEditTodo.editable && isEditTodo.name === item.name ? (
             <InputEdit item={item} />
           ) : (
@@ -114,7 +117,7 @@ const TodosList = (props) => {
               </div>
             </div>
           )}
-        </li>
+        </div>
       ))}
     </div>
   );
