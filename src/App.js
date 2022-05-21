@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect }  from 'react'; 
+import TodosList from "./components/TodosList"
+import TitleTodoList from "./components/TitleTodoList"
 
+import NewTodoItem from './components/NewTodoItem';
+import "./styles.scss"
 function App() {
+
+  useEffect(() => {
+    if(!localStorage.getItem("TodoList")){
+      localStorage.setItem("TodoList", JSON.stringify([]))
+    }
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="contenedorApp ">
+      <TitleTodoList />
+      <NewTodoItem />
+      <TodosList />
     </div>
   );
 }

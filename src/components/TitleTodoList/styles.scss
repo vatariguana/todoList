@@ -1,0 +1,21 @@
+
+@media only screen and (max-width: 600px) {
+    //mobile
+    .titleTodoList{
+        margin-top: 100px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        color: white;
+        margin-left: 8px;
+
+    }
+  }
+  @media only screen and (min-width: 600px) {
+      //des
+      .titleTodoList{
+
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        color: white;
+    }
+  }

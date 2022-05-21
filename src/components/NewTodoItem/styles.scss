@@ -1,0 +1,63 @@
+
+@media only screen and (max-width: 600px) {
+    //mobile
+    .newTodoItem{
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color:#353F3E;
+        padding: 3px;
+        .inputNew{
+            height: 33px;
+            width: 200px;
+            padding: 2px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color:#353F3E;
+            color: white;
+            border:#353F3E;
+            margin-left: 3px;
+        }
+        .inputNew:focus{
+            outline-width: 0;
+        }
+        .buttonNew{
+            padding: 2px;
+            width: 130px;
+            height: 37px;
+            border: none;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color: #353F3E;
+            color: white;
+        }
+    }
+   
+  }
+  @media only screen and (min-width: 600px) {
+      //des
+      .newTodoItem{
+        .inputNew{
+            height: 33px;
+            width: 300px;
+            padding: 2px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color:#353F3E;
+            color: white;
+            border:#353F3E;
+        }
+        .inputNew:focus{
+            outline-width: 0;
+        }
+        .buttonNew{
+            padding: 2px;
+            width: 130px;
+            height: 37px;
+            border: none;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color: #353F3E;
+            color: white;
+        }
+    }
+  }
