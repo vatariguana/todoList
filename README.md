@@ -13,6 +13,10 @@ Para realizar el proyecto utilice las siguientes tecnologías: <br>
   ⚡React <br>
   ⚡Redux <br>
   ⚡Sass <br>
+ 
+ ### 
+Para realizar el deploy utilice: <br>
+⚡ Vercel
   
  Al momento de refrescar la página y con el objetivo que no se pierda las tareas creadas utilice localStorage para guardar la información.
 
