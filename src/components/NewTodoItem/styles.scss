@@ -18,41 +18,21 @@
     padding: 8px;
     border: none;
     font-size: $fontsize;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: $georgiaFont;
     background-color: $darkGray;
     color: $white;
     &:hover {
       cursor: pointer;
     }
   }
-}
-@media (max-width: 600px) {
-  //mobile
-  .newTodoItem {
-    background-color: $darkGray;
+  @media (max-width: 600px) {
     padding: 4px;
     .inputNew {
-      height: 34px;
       width: 200px;
-      padding: 2px;
-      font-size: $fontsize;
-      background-color: $darkGray;
-      color: $white;
-      border: $darkGray;
       margin-left: 2px;
-      &:focus {
-        outline-width: 0;
-      }
     }
     .buttonNew {
       padding: 12px;
-      border: none;
-      font-size: $fontsize;
-      background-color: $darkGray;
-      color: $white;
-      &:hover {
-        cursor: pointer;
-      }
     }
   }
 }

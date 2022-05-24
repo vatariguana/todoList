@@ -23,7 +23,7 @@
           width: 300px;
           font-family: Georgia, "Times New Roman", Times, serif;
           font-size: 18px;
-          color: white;
+          color: $white;
           margin-left: 6px;
         }
       }
@@ -31,12 +31,11 @@
         margin-bottom: 20px;
         display: flex;
         margin-left: 2px;
-
         .buttonItem {
           margin: 2px;
-          background-color: #353f3e;
-          width: 35px;
-          height: 35px;
+          background-color: $darkGray;
+          width: 36px;
+          height: 36px;
           border: none;
           color: white;
           &:hover {
@@ -49,7 +48,7 @@
       background-color: $lightGray;
       border: none;
       .inputEdit {
-        height: 33px;
+        height: 34px;
         width: 300px;
         padding: 2px;
         font-family: $georgiaFont;
@@ -63,11 +62,11 @@
         }
       }
       .buttonEdit {
-        padding: 7px;
+        padding: 8px;
         width: 131px;
         border: none;
         font-family: $georgiaFont;
-        font-size: 20px;
+        font-size: $fontsize;
         background-color: $lightGray;
         color: $white;
         &:hover {
@@ -76,69 +75,30 @@
       }
     }
   }
-}
-
-@media (max-width: 600px) {
-  .todoListContainer {
+  @media (max-width: 600px) {
     margin-top: 4%;
     .itemList {
-      background-color: $darkGray;
       border-bottom: 1px solid $white;
-      &.tachado {
-        text-decoration: line-through;
-        background-color: $darkGray;
-        border-bottom: 1px solid $white;
-        color: rgb(255, 51, 0);
-      }
       .itemsContainer {
         .item {
           display: contents;
           .nameItem {
             width: 210px;
-            font-size: 18px;
-            color: white;
-            margin-left: 6px;
           }
         }
         .contenedorButton {
           margin-left: 2px;
-          .buttonItem {
-            background-color: $darkGray;
-            width: 36px;
-            height: 36px;
-            border: none;
-            color: $white;
-            &:hover {
-              cursor: pointer;
-            }
-          }
         }
       }
       .contenedorEdit {
-        background-color: $lightGray;
-        border: none;
         .inputEdit {
-          height: 34px;
           width: 210px;
           padding: 6px;
           border: none;
           font-size: $fontsize;
-          background-color: $lightGray;
-          color: $white;
-          &:focus {
-            outline-width: 0;
-          }
         }
         .buttonEdit {
           padding: 12px;
-          border: none;
-          font-family: Georgia, "Times New Roman", Times, serif;
-          font-size: $fontsize;
-          background-color: $lightGray;
-          color: $white;
-          &:hover {
-            cursor: pointer;
-          }
         }
       }
     }

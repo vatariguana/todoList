@@ -2,10 +2,7 @@
   width: 100%;
   display: inline-grid;
   justify-content: center;
-}
-@media (max-width: 600px) {
-  //mobile
-  .contenedorApp {
+  @media (max-width: 600px) {
     width: auto;
     display: grid;
   }

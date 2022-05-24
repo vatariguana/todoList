@@ -3,12 +3,7 @@
 .titleTodoList {
   font-size: $fontsize;
   color: $white;
-}
-@media (max-width: 600px) {
-  //mobile
-  .titleTodoList {
+  @media (max-width: 600px) {
     margin-top: 20%;
-    font-size: $fontsize;
-    color: $white;
   }
 }
