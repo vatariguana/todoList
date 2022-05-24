@@ -1,12 +1,32 @@
+# Todo List with React, Redux, Sass
+
+### Deploy
+Link: https://todo-list-liart.vercel.app/
+
+### Proyect image
+
+<img src="./src/imagens/todoList.png" alt="todolist"/>
+
+### 
+Para realizar el proyecto utilice las siguientes tecnologías: <br>
+  ⚡Javascript <br>
+  ⚡React <br>
+  ⚡Redux <br>
+  ⚡Sass <br>
+ 
+ ### 
+Para realizar el deploy utilice: <br>
+⚡ Vercel
+  
+ Al momento de refrescar la página y con el objetivo que no se pierda las tareas creadas utilice localStorage para guardar la información.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-### image
 
-<img src="./src/imagens/todoList.png" alt="todolist"/>
 In the project directory, you can run:
 
 ### `npm start`
